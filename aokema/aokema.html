@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0px;padding: 0px;border: 0px;}
+		.clear{clear: both;}
+		.wrap{width: 1440px;/*height: 1052px;*/margin:0 auto;background-color: #fff;}
+		.head{width: 1440px;/*height: 668px;*/}
+		.up{width: 1152px;/*height: 104px;*/margin: 0 auto;}
+		.up .logo{width: 185px;/*height: 104px;*/float: left;background-position: 0 31px;}
+		.up .logo a{width: 138px;/*height: 50px;*/display: block;background-image: url('images/logo_03.png');margin-top: 31px;background-repeat: no-repeat;padding-top: 50px; }
+		.nav{width: 705px;/*height: 104px;*/float: left;}
+		.nav ul{width: 705px;list-style-type: none;}
+		.nav ul li{float: left;width: 115px;border-left: 2px solid #ececec;}
+		.nav ul li a{display: block;width: 115px;/*height: 104px;*/line-height: 104px;text-align: center;text-decoration: none;color: #739dbd;font-size: 16px;}
+		.nav ul .cai{border-right:2px solid #ececec; }
+		.nav ul li a:hover{background-image: url('images/bian_04.png');color: #666666;}
+		.search{width: 225px;/*height: 61px;*/float: right;padding-top: 43px;padding-left:37px; }	
+		.banner{width: 1440px; /*height: 559px;*/border-top: 3px solid #104768;border-bottom: 1px solid white;background-image: url('images/banner_39.jpg');}
+		.main-wrap{width: 1440px;/*height: 343px;*/background-image: url('images/main-jian_34.jpg');background-repeat: repeat-x;}
+		.mian{width: 1150px;/*height: 343px;*/margin: 0 auto;}
+		.mian .mian-l{width: 435px;/*height: 343px;*/float: left;/*background-image: url('images/m-l_21.jpg')*/margin-bottom: 49px;}
+		.mian .mian-l .ao{margin-left: 13px;width: 238px;font-size: 14px;margin-top: 14px;line-height: 21px;color: #555555;font-family: "宋体";display: block;text-decoration: none;}
+		.mian .mian-l .m-l{width: 126px;/*height: 81px;*/margin-top: 12px;float: left;}
+		.mian .mian-l .we{width: 132px;font-size: 10px;color:#6e9ac5;margin-top: 33px;}
+		.mian .mian-l .zi{width: 238px;float: left;}
+		.mian .mian-l a{font-size: 8px;display: block;margin-left:13px;text-decoration: none;color: #1d679a;margin-top: 5px;font-family: "Arial"; }
+		.mian .mian-l h2{margin-top: 26px;font-size: 16px;font-family: "微软雅黑";}
+		.mian .mian-l .three{display: block; margin-top: 26px;font-size: 14px;font-family:"宋体";}
+		.mian .mian-l .tuzi{width: 435px;/*height: 95px;*/}
+		.mian .mian-l .dier{margin-top: 9px;width: 31px;}
+		.fute{width: 234px;/*height: 26px;*/margin-top: 8px;}
+		.mian .mian-m{float: left;width: 435px;/*height: 343px;*/margin-bottom: 58px;}
+		.mian .mian-m .mian-m-t{width: 435px;/*height: 126px;*/}
+		.mian .mian-m .mian-m-t .top-t{margin-top: 26px;font-size: 16px;font-weight: bold;font-family: "微软雅黑"；}
+		.mian .mian-m .top,.mian .mian-m .down{width: 413px;margin-top: 18px;}
+		.mian .mian-m .down{margin-top: 0px; padding-top: 18px;border-top: 1px dashed #cecece;}
+		.mian .mian-m .top a,.mian .mian-m .down a{color: #555555;font-size: 16px;text-decoration: none;font-weight: bold;background-image: url('images/xiaosanjiao_59.jpg');background-repeat: no-repeat;padding-left: 9px;background-position: 0 6px;font-family: "宋体";}
+		.mian .mian-m .down a:hover{color: #076aad;background-image: url('images/lansanjiao_03.jpg');}
+		.mian .mian-m .top a:hover{color: #076aad;background-image: url('images/lansanjiao_03.jpg');}
+		.mian .mian-m .top span,.mian .mian-m .down span{float: right;font-size: 10px;color: #959494;}
+		.mian .mian-m .you,.mian .mian-m .diandong{margin-top: 6px;font-size: 14px;line-height: 25px;color: #666666;width: 394px;padding-left: 9px;}
+		.mian .mian-m .mian-m-d{width: 435px;/*height: 189px; */}
+		.mian .mian-m .mian-m-d .geng a{display: block; text-decoration: none;font-size: 14px;font-family: "宋体";color: #076aad;width: auto;margin-top: 31px;padding-left: 10px;}
+		.mian .mian-r{width: 280px;/*height: 343px;*/float: left;margin-bottom: 111px;}
+		.mian .mian-r .box2{background-image: url('images/aokema01_06.jpg');}
+		.mian .mian-r .box1,.mian .mian-r .box2{width: 245px;/*height: 112px;*/float:right;margin-top: 17px;}
+		.mian .mian-r .box1 .hao{display: block; background-image: url('images/aokema01_40.png');/*height: 7px;*/background-repeat: no-repeat;margin-top: 10px;margin-left: 15px;padding-top: 7px;margin-bottom: 13px;}
+		.mian .mian-r .box2 .haoxia{display: block; background-image: url('images/aokema01_40.png');/*height: 7px;*/background-repeat: no-repeat;margin-top: 10px;margin-right: 17px;float: right;width: 14px;padding-top: 7px;margin-bottom: 9px;}
+		.mian .mian-r .box1{background-image: url('images/aokema01_03.jpg');margin-top: 27px;}
+		.mian-r .box1 .gong{display: block;margin-top: 28px;font-size: 14px;color: #076aad;margin-left: 13px;font-weight: bolder;font-family: "微软雅黑";text-decoration: none;}
+		.mian-r .box1 .coop{margin-top: 5px;font-size: 10px;color: #a9a9a9;margin-left: 14px;/*width: 121px;*/font-weight: bold;font-family: "Arial";}
+		.mian-r .box1 .supp{margin-top: 2px;font-size: 8px;color: #8b8b8b;margin-left: 11px;font-family: "Arial";}
+		.mian-r .box2 .quanqiu{margin-top: 27px;font-size: 14px;color: #076aad;margin-left: 155px;font-weight: bolder;font-family: "微软雅黑";display: block;text-decoration: none;}
+		.mian-r .box2 .ford{margin-top: 9px;font-size: 9px;color: #8b8b8b;margin-left: 156px;font-weight: bold;font-family: "Arial";}
+		.mian-r .box2 .life{margin-top: 3px;font-size: 8px;color: #8b8b8b;margin-left: 125px;font-family: "Arial";}
+		.footer{width: 1440px;/*height: 41px;*/background-image: url('images/dibian_57.jpg');background-repeat: repeat-x;padding-top: 3px;}
+		.footer .footer-contain{width: 1150px;/*height: 41px;*/margin: 0 auto;}
+		
+		.footer .footer-contain ul{width: 318px;float: left;margin-top: 16px;}
+		.footer .footer-contain ul li{list-style-type: none;float: left;width: 80px;text-align: center;border-right: 2px solid #959595;line-height: 12px;}
+		.footer .footer-contain ul li a{text-decoration: none;color: #666666;font-size: 14px;font-family: "微软雅黑";}
+		.footer .footer-contain ul .one{width: 67px;text-align: left;}
+		.footer .footer-contain ul .last{width: 67px;text-align: right;border-right: 0;}
+		.footer .footer-contain p{float: right;font-size: 14px;margin-top: 14px;color: #c1c1c1;font-family: "Arial";}
+
+	</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+			<div class="up">
+				<div class="logo">
+			     	<a href="#"></a>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">产品中心</a></li>
+						<li><a href="#">关于澳柯玛</a></li>
+						<li><a href="#">购车支持</a></li>
+						<li><a href="#">活动中心</a></li>
+						<li class="cai"><a href="#">人才招聘</a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<img src="images/search_16.jpg">
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="banner">
+				<img src="images/banner_39.jpg">
+			</div>
+		</div>
+		<div class="main-wrap">
+			<div class="mian">
+				<div class="mian-l">
+					<h2>集团简介</h2>
+					<b class="three">澳柯玛股份有限公司</b>
+					<div class="tuzi">
+						<div class="m-l"><img src="images/m-l_21_58.jpg"></div>
+						<div class="zi">
+							<a class="ao" href="#">
+							澳柯玛是全球知名的制冷装备供应商，
+				是全球制冷家电、环保电动车和生活
+				家电领先制造商之一...</a>
+				            <a href="#">MORE&nbsp>></a>
+				        </div>
+				    </div>
+                    <div class="dier">
+				    	<img src="images/lunbo_74.jpg">
+				    </div>
+			        <p class="we">WELCOME TO FORD</p>
+			        <div class="fute"><img src="images/sou_40.jpg"></div>
+				</div>	
+				<div class="mian-m">
+					<div class="mian-m-t">
+						<p class="top-t">新闻中心</p>
+						<p class="top"><a href="#">澳柯玛两项最新冰箱技术达到国际先进水平</a><span>2012-08-21</span></p>
+						<p class="you">由中国轻工业联合会组织并主持召开了澳柯玛完成的“云智能WiFi物联技术在冰箱产品上的应用”...</p>
+					</div>
+					<div class="mian-m-d">
+						<p class="down"><a href="#">澳柯玛电动车牵手宋庆龄基金会濮阳助学</a><span>2012-08-21</span></p>
+						<p class="diandong">澳柯玛电动车牵手宋庆龄基金会在河南濮阳开展了“全城换购·情系濮阳”的大型公益捐资助学活动...</p>
+						<p class="geng"><a href="#">查看更多 >></a></p>
+					</div>
+				</div>
+				<div class="mian-r">
+					<div class="box1">
+						<!-- <p class="he">合作 共赢</p> -->
+						<a class="gong" href="#">合作 共赢</a>
+						<p class="coop">Cooperation and win</p>
+						<p class="supp">Supplier to the entire china</p>
+						<a class="hao" href="#"></a>
+					</div>
+					<div class="box2">
+						<a class="quanqiu" href="#">澳柯玛 全球</a>
+						<!-- <p class="quanqiu">澳柯玛 全球</p> -->
+						<p class="ford">Ford Global</p>
+						<p class="life">Wonderful your life</p>
+						<a class="haoxia" href="#"></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+		
+		<div class="footer">
+			<div class="footer-contain">
+				<ul>
+					<li class="one"><a href="#">联系我们</a></li>
+					<li><a href="#"> 网站地图</a></li>
+					<li><a href="#">法律政策</a></li>
+					<li class="last"><a href="#">隐私权限</a></li>
+				</ul>
+				<p>Copyright © 2010 CHINA澳柯玛 All Right Rsesrved.</p>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
