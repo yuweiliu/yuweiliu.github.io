@@ -1,0 +1,15 @@
+*{
+	margin: 0;	
+	padding: 0;
+	border: 0;
+}
+.card{
+	border:1px solid #202121;
+	width: 300px;
+}
+h3{
+	float: left;
+}
+.p1{
+	float: right;
+}
